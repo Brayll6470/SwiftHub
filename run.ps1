@@ -1,0 +1,50 @@
+# ==============================================================================
+# SwiftHub Core - Ana Merkez Yonetici Kontrolu ve Yukleyici
+# ==============================================================================
+
+# GUVENLIK PROTOKOLU ZORLAMASI (GitHub'in baglantiyi reddetmesini engeller)
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+Write-Host ""
+Write-Host "======================================================================" -ForegroundColor Magenta
+Write-Host "                SWIFTHUB CORE - INITIALIZING...                       " -ForegroundColor White
+Write-Host "======================================================================" -ForegroundColor Magenta
+Write-Host ""
+
+# Yonetici yetkisi kontrolu
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "[!] SwiftHub Ekosistemi tam yetkiyle (Administrator) calismak zorundadir." -ForegroundColor Yellow
+    Write-Host "[*] Lutfen UAC penceresinde 'Evet' secenegini tiklayin..." -ForegroundColor White
+    Write-Host ""
+
+    try {
+        Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"irm https://raw.githubusercontent.com/cyberQbit/SwiftHub/main/run.ps1 | iex`"" -Verb RunAs
+    } catch {
+        Write-Host "[X] Yonetici yetkileri alinamadi! Sistem durduruldu." -ForegroundColor Red
+        $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    }
+    exit
+}
+
+Write-Host "[OK] Yetki dogrulandi. Core (Cekirdek) indiriliyor..." -ForegroundColor Green
+
+# SwiftHub.bat Byte-Level Indirme
+$batPath = "$env:TEMP\SwiftHub.bat"
+try {
+    $bytes = (New-Object System.Net.WebClient).DownloadData("https://raw.githubusercontent.com/cyberQbit/SwiftHub/main/SwiftHub.bat?t=$((Get-Date).Ticks)")
+    $str = [System.Text.Encoding]::UTF8.GetString($bytes)
+    [System.IO.File]::WriteAllLines($batPath, ($str -split '\r?\n'), (New-Object System.Text.UTF8Encoding $false))
+
+    Write-Host "[OK] Merkez Baglantisi Kuruldu! Arayuz aciliyor..." -ForegroundColor Cyan
+    Start-Sleep -Milliseconds 400
+
+    if (Get-Command wt.exe -ErrorAction SilentlyContinue) {
+        Start-Process wt.exe -ArgumentList "cmd.exe /c `"`"$batPath`"`""
+    } else {
+        Start-Process cmd.exe -ArgumentList "/c `"`"$batPath`"`""
+    }
+
+} catch {
+    Write-Host "[X] SwiftHub indirilemedi! Baglantinizi kontrol edin veya Reponun PUBLIC oldugundan emin olun." -ForegroundColor Red
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+}
