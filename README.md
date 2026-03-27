@@ -21,7 +21,7 @@ Bütün işletim sistemi optimizasyonlarını, geliştirici ortamlarını ve ağ
 
 <div id="-english">
 
-## <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" width="24"> Concept: The "Zero-Footprint" Architecture
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" width="24"> The "Zero-Footprint" Architecture
 
 **SwiftHub** is not just another script; it is a dynamic payload delivery engine. It does not bloat your hard drive. By utilizing advanced *Byte-Level Cloud Fetching*, it directly downloads the required ecosystem module into memory, executes it smoothly in the modern Windows Terminal (`wt.exe`), and vanishes without a trace when you are done.
 
@@ -47,7 +47,7 @@ irm aydinaydmr.com.tr/core | iex
 
 <div id="-türkçe">
 
-## <img src="https://cdn-icons-png.flaticon.com/512/197/197518.png" width="24"> Konsept: "Sıfır İz" (Zero-Footprint) Mimarisi
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197518.png" width="24"> "Sıfır İz" (Zero-Footprint) Mimarisi
 
 SwiftHub sıradan bir başlangıç dosyası değildir; dinamik bir bulut motorudur. Bilgisayarınızı gereksiz dosyalarla doldurmaz. Gelişmiş Byte-Seviyesi İndirme teknolojisini kullanarak, ihtiyacınız olan ekosistem modülünü doğrudan belleğe (RAM) çeker, modern Windows Terminal'de (`wt.exe`) kusursuzca çalıştırır ve işiniz bittiğinde hiçbir iz bırakmadan kaybolur.
 
